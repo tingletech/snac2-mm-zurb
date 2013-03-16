@@ -7,19 +7,10 @@
 @import "foundation";
 
 @import "searchblock";
-    .top-bar-snac,
-    .top-bar-section li a:not(.button) {
-      background-color: #036; /* http://www.color-hex.com/color/003366 */
-    }
-    .top-bar-section li a:not(.button):hover {
+
+   .top-bar-section li a:not(.button):hover {
       background-color: #194775;
     }
-    .top-bar-section > ul > .divider {
-      background-color: #001e3d;
-      border-right-color: #001e3d;
-      border-left-color: #001e3d;
-    }
-
 
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
