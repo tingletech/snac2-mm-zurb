@@ -5,26 +5,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Social Network Archival Context prototype 2</title>
+    <title><%= data.page.title %> | Social Networks and Archival Context prototype 2</title>
     
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
       
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "Social Network Archival Context prototype 2" %></title>
-      
-      <%= stylesheet_link_tag "site"  %>
-      <%= javascript_include_tag "app"  %>
+    <%= stylesheet_link_tag "site"  %>
+    <%= javascript_include_tag "app"  %>
   </head>
 
   <body class="<%= page_classes %>">
-   <!-- http://foundation.zurb.com/docs/components/top-bar.html -->
+  <!-- http://foundation.zurb.com/docs/components/top-bar.html -->
   <nav class="top-bar top-bar-snac">
     <ul class="title-area">
       <!-- Title Area -->
       <li class="name">
         <a href="http://socialarchive.iath.virginia.edu" class="tiny button secondary">Social Networks and Archival Context</a>
-        <a href="#" class="tiny button">prototype v2.0.1</a>
+        <a href="http://socialarchive.iath.virginia.edu/snac.2/" class="tiny button">prototype v2.0.1</a>
       </li>
       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
