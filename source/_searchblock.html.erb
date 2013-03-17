@@ -1,0 +1,52 @@
+  <div class="searchblock">
+    <div class="row">
+      <ul>
+        <li class="selected"><a>All</a></li>
+        <li><a href="/person/">Person</a></li>
+        <li><a href="/corporateBody/">Corporate Body</a></li>
+        <li><a href="/family/">Family</a></li>
+      </ul>
+    </div>
+
+    <form methon="GET" action="/xtf/search" class="cpfSearch row">
+      <div class="large-6 columns">
+        <input id="userInput" type="text" size="27" 
+          title="enter a name or keywords" placeholder="enter a name or keywords" name="text" value="" 
+          class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" />
+      </div>
+      <div class="small-2 large-1 columns">
+        <input class="button small" title="full text" type="submit" value="search" />
+      </div>
+      <div class="small-8 large-4 columns">
+      <label class="advancedSearch" title="Advanced Search" style="">
+        <i>advanced</i>… limit to <a title="EAC tag library" class="noarrow" href="https://spreadsheets.google.com/pub?key=0AmlczcEUr8GxdGRjeEJ6S2tBU0lmMjlDaWZZdFNiQmc&amp;hl=en&amp;output=html">section</a>
+
+        <select name="sectionType">
+          <option value="" selected="selected">eac-cpf</option>
+          <option value="control">&#160;&#160;control</option>
+          <option value="cpfdescription" title="default" class="default" selected="selected">&#160;&#160;cpfDescription</option>
+          <option value="identity">&#160;&#160;&#160;&#160;identity</option>
+          <option value="description">&#160;&#160;&#160;&#160;description</option>
+          <option value="existdates">&#160;&#160;&#160;&#160;&#160;&#160;existDates</option>
+          <option value="bioghist">&#160;&#160;&#160;&#160;&#160;&#160;biogHist</option>
+          <option value="generalcontext">&#160;&#160;&#160;&#160;&#160;&#160;generalContext</option>
+          <option value="occupation">&#160;&#160;&#160;&#160;&#160;&#160;occupation</option>
+          <option value="localdescription">&#160;&#160;&#160;&#160;&#160;&#160;localDescription</option>
+          <option value="relation">&#160;&#160;&#160;&#160;relations</option>
+          <option value="cpfrelation">&#160;&#160;&#160;&#160;&#160;&#160;cpfRelation</option>
+          <option value="resourcerelation">&#160;&#160;&#160;&#160;&#160;&#160;resourceRelation</option>
+        </select>
+       <script>
+  $("label.advancedSearch").hide();
+  $("form.cpfSearch").hoverIntent(function () {
+    $("label.advancedSearch").css("display", "inline");
+  }, function () {
+    if ($("label.advancedSearch select").val() === 'cpfdescription') {
+      $("label.advancedSearch").fadeOut();
+    }
+  });
+        </script>
+      </label>
+      </div>
+    </form>
+  </div>

@@ -32,6 +32,14 @@
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
+# ["person", "corporateBody", "family"].each do |name|
+#   proxy "/#{name}.html", "/index.html", :locals => { :entity_type => name }
+# end
+["person", "corporateBody", "family"].each do |name|
+  page "/#{name}.html", :proxy => "/index.html" do
+    @entity_type = name
+  end
+end
 
 ###
 # Helpers
@@ -52,10 +60,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
-
-["person", "corporateBody", "family"].each do |name|
-  proxy "/#{name}.html", "/index.html", :locals => { :entity_type => name }
-end
 
 activate :directory_indexes
 
