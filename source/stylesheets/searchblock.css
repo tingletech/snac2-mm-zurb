@@ -42,8 +42,8 @@
     }
 
 
-.cpfSearch input[type="text"] { font-size: 1.32em; font-family:inherit;}
-.cpfSearch input.button { font-size: 1.32em; background-color: #ffffff; 
+.cpfSearch input[type="text"] { font-family:inherit;}
+.cpfSearch input.button { background-color: #ffffff; 
 font-family: inherit; color: black; 
 }
 
