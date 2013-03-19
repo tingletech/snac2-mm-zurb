@@ -1,0 +1,63 @@
+/* tabs http://css.maxdesign.com.au/listamatic/horizontal03.htm */
+
+.searchblock ul {
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: 0; 
+  padding-left: 0;
+  background-color: #036;
+  color: #fff;
+  float: left;
+  width: 100%;
+}
+.searchblock > a.noarrow:hover { text-decoration: none; } 
+
+.searchblock ul li { display: inline; }
+.searchblock ul li:first-child a { font-weight: bold; }
+.searchblock ul li a {
+  background-color: #036;
+  color: #fff;
+  padding: 0.1em 0.4em;
+  text-decoration: none;
+  float: left;
+  border-right: 1px solid #fff;
+}
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+@media #{$small} { 
+  .searchblock ul li a {
+    padding: 0.2em 1em;
+  }
+}
+
+.searchblock ul li.selected a {
+  background-color: #d6e5f4;
+  color: #000;
+}
+
+.searchblock ul li a:hover {
+  background-color: #369;
+  color: #fff;
+ }
+
+.searchblock .row { 
+    background-color: #d6e5f4;
+    }
+
+
+.cpfSearch input[type="text"] { font-family:inherit;}
+.cpfSearch input.button { background-color: #ffffff; 
+font-family: inherit; color: black; 
+}
+
+/* .cpfSearch div.top-facets { float: right; } */
+.cpfSearch .advancedSearch { filter:alpha(opacity=60); -moz-opacity:0.6; -khtml-opacity: 0.6; opacity: 0.6; 
+} 
+
+form.cpfSearch div.facet-limit { 
+  border: 1px solid #000; 
+  background-color: #FFF;
+  margin-bottom: 0.633em; 
+  width: 220px;
+}
+form.cpfSearch div.top-facets { clear: both; }
